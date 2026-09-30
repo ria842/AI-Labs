@@ -1,0 +1,88 @@
+FIRST-ORDER TRANSITION PROBABILITIES
+=====================================
+
+P(next_token | 'the')
+  cat        : 0.2500
+  mat        : 0.1667
+  rug        : 0.1667
+  dog        : 0.2500
+  park       : 0.1667
+
+P(next_token | 'cat')
+  sat        : 0.6667
+  ran        : 0.3333
+
+P(next_token | 'dog')
+  sat        : 0.6667
+  ran        : 0.3333
+
+P(next_token | 'sat')
+  on         : 1.0000
+
+P(next_token | 'ran')
+  to         : 1.0000
+
+SECOND-ORDER TRANSITION PROBABILITIES
+======================================
+
+P(next_token | '<START>', 'the')
+  cat        : 0.5000
+  dog        : 0.5000
+
+P(next_token | 'the', 'cat')
+  sat        : 0.6667
+  ran        : 0.3333
+
+P(next_token | 'the', 'dog')
+  sat        : 0.6667
+  ran        : 0.3333
+
+P(next_token | 'cat', 'sat')
+  on         : 1.0000
+
+P(next_token | 'dog', 'sat')
+  on         : 1.0000
+
+P(next_token | 'cat', 'ran')
+  to         : 1.0000
+
+P(next_token | 'dog', 'ran')
+  to         : 1.0000
+
+P(next_token | 'sat', 'on')
+  the        : 1.0000
+
+P(next_token | 'ran', 'to')
+  the        : 1.0000
+
+FIRST-ORDER GREEDY GENERATION
+=============================
+1. the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on
+2. the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on
+3. the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on
+4. the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on
+5. the cat sat on the cat sat on the cat sat on the cat sat on the cat sat on
+
+FIRST-ORDER SAMPLING GENERATION
+===============================
+1. the cat sat on the mat
+2. the dog ran to the cat ran to the rug
+3. the rug
+4. the cat sat on the cat ran to the cat sat on the mat
+5. the cat sat on the rug
+
+SECOND-ORDER GREEDY GENERATION
+==============================
+1. the cat sat on the mat
+2. the cat sat on the mat
+3. the cat sat on the mat
+4. the cat sat on the mat
+5. the cat sat on the mat
+
+SECOND-ORDER SAMPLING GENERATION
+================================
+1. the dog sat on the mat
+2. the cat sat on the rug
+3. the cat ran to the park
+4. the dog ran to the park
+5. the cat sat on the rug
