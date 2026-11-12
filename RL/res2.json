@@ -1,0 +1,1 @@
+{"greedy": {"path": [[2, 0], [2, 1], [2, 2], [2, 3], [2, 4]], "steps": 4, "success": true, "collision": false, "timeout": false, "invalid": 0}, "start00": {"path": [[0, 0], [1, 0], [2, 0], [2, 1], [2, 2], [2, 3], [2, 4]], "steps": 6, "success": true, "collision": false, "timeout": false, "invalid": 0}}
